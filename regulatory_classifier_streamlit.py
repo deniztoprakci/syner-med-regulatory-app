@@ -101,18 +101,6 @@ else:
     st.success(f"**Likely a Medical Device** → Provisional class: **{device_class}**")
     outcome_text = f"Outcome: Likely **Medical Device** — provisional class: {device_class}"
 
-# ---------- Decision Tree Visual ----------
-st.subheader("Decision Tree (training visual)")
-fig = plt.figure(figsize=(6,4))
-plt.axis('off')
-plt.text(0.05, 0.8, "Medical purpose?", fontsize=12, bbox=dict(boxstyle="round", fc="white"))
-plt.text(0.5, 0.8, "No → Cosmetic (if no therapeutic claims)", fontsize=10)
-plt.text(0.05, 0.6, "Pharmacological / immunological / metabolic MoA?", fontsize=12, bbox=dict(boxstyle="round", fc="white"))
-plt.text(0.5, 0.6, "Yes → Medicine", fontsize=10)
-plt.text(0.05, 0.4, "Device attributes", fontsize=12, bbox=dict(boxstyle="round", fc="white"))
-plt.text(0.5, 0.4, "Sterile/Measuring? Invasive long-term? Active high-risk?\n→ Class I / Is/Im/Ir / IIa / IIb / III", fontsize=10)
-st.pyplot(fig)
-
 # ---------- GB Pathway Guidance ----------
 st.subheader("GB Market Pathway (training)")
 st.markdown("""
